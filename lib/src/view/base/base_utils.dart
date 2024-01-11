@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../utils/style/app_colors.dart';
+import '../../utils/style/app_colors.dart';
 
 class BaseUtils {
   static PreferredSizeWidget appBar({Color? backgroundColor}) => AppBar(

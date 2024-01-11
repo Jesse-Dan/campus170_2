@@ -6,12 +6,10 @@ import 'package:http/http.dart' as http;
 import '../../utils/enums/enums.dart';
 import '../exception/client_exception.dart';
 import '../interfaces/client_interface.dart';
-import '../models/service/un_auth_response.dart';
 import '../services/logger/logger.dart';
 import 'client_options/client_options.dart';
 
 class ApiClient with ClientInterface, ClientUtils {
-  ApiClient();
 
   Future<(Map<String, dynamic>?, ResponseType)> handleResponse(
       http.Response response) async {

@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:navigation_system/go/go.dart';
-
-import '../../../utils/style/app_colors.dart';
+import '../../utils/style/app_colors.dart';
 
 class BaseScaffold extends StatefulWidget {
   const BaseScaffold({
