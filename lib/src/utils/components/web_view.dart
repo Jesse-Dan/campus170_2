@@ -69,7 +69,6 @@ class WebViewStack extends StatefulWidget {
 }
 
 class _WebViewStackState extends State<WebViewStack> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   var loadingPercentage = 0;
 
   @override
