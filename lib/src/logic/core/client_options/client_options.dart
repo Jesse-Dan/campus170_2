@@ -1,4 +1,3 @@
-
 import '../../../utils/constants/global_constants.dart';
 import '../../../utils/enums/enums.dart';
 import '../../services/storage_service/local_storage_service.dart';
@@ -6,7 +5,8 @@ import '../../services/storage_service/local_storage_service.dart';
 mixin ClientUtils {
   static final LocalStgService _localStgService = LocalStgService();
 
-  static BaseOptions getOptions({bool isAuth = true}) {
+  static BaseOptions getOptions(
+      {bool isAuth = true, bool isPaystackAuth = false}) {
     String? bearerToken =
         _localStgService.getData(GlobalConstants.BEARER_TOKEN);
 
@@ -17,6 +17,9 @@ mixin ClientUtils {
 
     if (isAuth) {
       headers['Authorization'] = 'Bearer $bearerToken';
+    }
+    if (isPaystackAuth) {
+      headers['Authorization'] = 'Bearer ${PaystackConstant.SK_TEST}';
     }
 
     return BaseOptions(

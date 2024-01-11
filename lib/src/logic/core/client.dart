@@ -10,7 +10,6 @@ import '../services/logger/logger.dart';
 import 'client_options/client_options.dart';
 
 class ApiClient with ClientInterface, ClientUtils {
-
   Future<(Map<String, dynamic>?, ResponseType)> handleResponse(
       http.Response response) async {
     if (response.statusCode == 200 || response.statusCode == 201) {
@@ -18,8 +17,7 @@ class ApiClient with ClientInterface, ClientUtils {
         json.decode(response.body) as Map<String, dynamic>,
         ResponseType.Success
       );
-    }
-   else {
+    } else {
       return (
         json.decode(response.body) as Map<String, dynamic>,
         ResponseType.Error
@@ -32,21 +30,23 @@ class ApiClient with ClientInterface, ClientUtils {
     HttpMethod method = HttpMethod.get,
     Map<String, dynamic>? queryParams,
     bool isAuth = false,
+    bool isPaystackAuth = false,
     dynamic body,
   }) async {
     try {
       final response = await makeRequest(
-              '${ClientUtils.getOptions(
-                isAuth: isAuth,
-              ).baseUrl!}'
-              '$endpoint',
+              // '${ClientUtils.getOptions(
+              //   isAuth: isAuth,
+              // ).baseUrl!}'
+              endpoint,
               method: method,
               queryParams: queryParams,
               headers: ClientUtils.getOptions(
                 isAuth: isAuth,
+                isPaystackAuth:isPaystackAuth
               ).headers,
               body: json.encode(body))
-          .timeout(const Duration(seconds: 50000), onTimeout: () {
+          .timeout(const Duration(minutes: 5), onTimeout: () {
         throw TimeoutException('Request timed out after 50000 seconds');
       });
       return await handleResponse(response);

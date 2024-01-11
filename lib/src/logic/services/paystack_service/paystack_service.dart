@@ -10,7 +10,6 @@ class PaystackService {
 
   PaystackService._internal();
 
-  final String publicKey = 'pk_test_6a78062b33295be3cfce73c6e64bd54ebb454994';
   final ApiClient _apiClient = ApiClient();
 
   Future<Map<String, dynamic>> _post(String url, dynamic data) async {
@@ -18,14 +17,14 @@ class PaystackService {
       final response = await _apiClient.sendRequest(
         endpoint: url,
         method: HttpMethod.post,
-        isAuth: true,
+        isPaystackAuth: true,
         body: data,
       );
 
       if (response.$2 == ResponseType.Success) {
         return response.$1!;
       } else {
-        throw Exception('Failed to perform Paystack operation');
+        throw Exception(response.toString());
       }
     } catch (error) {
       throw Exception('Failed to perform Paystack operation: $error');
@@ -33,9 +32,14 @@ class PaystackService {
   }
 
   Future<Map<String, dynamic>> addCustomer(
-      String email, String name, int phone) async {
+      String email, String name, String phone) async {
     const url = 'https://api.paystack.co/customer';
-    final data = {'email': email, 'first_name': name, 'phone': phone};
+    final data = {
+      'email': email,
+      'first_name': name,
+      'phone': phone,
+      'last_name': "Test last name"
+    };
 
     return await _post(url, data);
   }
@@ -58,7 +62,7 @@ class PaystackService {
       final response = await _apiClient.sendRequest(
         endpoint: url,
         method: HttpMethod.get,
-        isAuth: true,
+        isPaystackAuth: true,
       );
 
       if (response.$2 == ResponseType.Success) {

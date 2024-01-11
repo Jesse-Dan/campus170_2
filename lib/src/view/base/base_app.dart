@@ -4,14 +4,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:campus170_2/src/utils/style/app_colors.dart';
 import 'package:campus170_2/src/view/base/base_scaffold.dart';
 
-import '../../logic/models/app/post/res/get_all_post_response.dart';
 import '../../utils/components/app_nav_bar_icoons.dart';
 
 class BaseApp extends StatefulWidget {
   static const String routeName = 'app.app';
   final int? currentIndex;
-  final Post? newPost;
-  BaseApp({super.key, required this.currentIndex, this.newPost}) {
+  BaseApp({super.key, required this.currentIndex}) {
     _currentIndex = currentIndex ?? 0;
   }
   late int _currentIndex;

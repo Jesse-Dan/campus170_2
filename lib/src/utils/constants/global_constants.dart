@@ -23,3 +23,11 @@ class GlobalConstants {
   static const String USER_MIDPOINT = 'user';
   static const String SUSCRIBE_MIDPOINT = 'sub';
 }
+
+/// PAYSTACK KEYS
+class PaystackConstant {
+  static const String SK_LIVE =
+      'sk_live_144c8f633c619c8eaaaf8939756e4df904dbb2b8';
+  static const String SK_TEST =
+      'sk_test_e012d9b453fe4b6b5bf2e7b67cb7f3fb7ab78345';
+}

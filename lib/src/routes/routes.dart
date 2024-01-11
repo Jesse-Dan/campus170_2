@@ -3,10 +3,11 @@ import 'package:navigation_system/navigation_system.dart';
 
 import '../utils/components/web_view.dart';
 import '../view/app/splash_screen.dart';
+import '../../Test/test.dart';
 
 class AppRoutes {
   static getRoutes(RouteSettings routeSettings) => NavigationSystem(
-        initialRoute: const SplashScreenView(),
+        initialRoute: const Test(),
         routes: {
           SplashScreenView.routeName: (context, args) =>
               const SplashScreenView(),
