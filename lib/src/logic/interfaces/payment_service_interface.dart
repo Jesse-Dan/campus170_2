@@ -1,0 +1,7 @@
+
+
+mixin PaymentServiceInterface{
+
+    void charge(){}
+
+}
