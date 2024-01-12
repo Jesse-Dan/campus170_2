@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/style/app_dimentions.dart';
-
 class BaseBody extends StatelessWidget {
   const BaseBody({
     super.key,
@@ -13,13 +11,8 @@ class BaseBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height - 84 - 90,
-      width: double.infinity,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: AppDimentions.k16),
-        child: Padding(
-            padding: const EdgeInsets.only(bottom: 70.0), child: _child),
-      ),
-    );
+        height: MediaQuery.of(context).size.height,
+        width: double.infinity,
+        child: _child);
   }
 }

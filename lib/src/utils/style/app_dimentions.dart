@@ -26,6 +26,6 @@ class AppDimentions {
     }
   }
 
-  static space({double? height, double? width}) =>
-      SizedBox(height: height ?? 0, width: width ?? 0);
+  static space([double? height, double? width]) =>
+      SizedBox(height: height ?? 16, width: width ?? 16);
 }

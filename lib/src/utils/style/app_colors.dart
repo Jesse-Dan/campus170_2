@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'hex_method.dart';
 
 class AppColors extends HexColor {
@@ -12,7 +13,7 @@ class AppColors extends HexColor {
   static final kpouchBlue = HexColor('#00C4CC');
 
   ///  STANDARD COLOR
-  static const ktransparentColor = Colors.transparent;
+  static final ktransparentColor = Colors.transparent;
   static final kblackColor = HexColor('#0B0B0B');
   static final kwhiteColor = HexColor('#FFFFFF');
 
@@ -41,28 +42,29 @@ class AppColors extends HexColor {
   static final kwarningColor900 = HexColor('#312004');
 
   /// PRIMARY DESIGN COLORS
-  static final kprimaryColor50 = HexColor('#FEF8F8');
-  static final kprimaryColor100 = HexColor('#FDF0F2');
-  static final kprimaryColor200 = HexColor('#FADADE');
-  static final kprimaryColor300 = HexColor('#FFC3CB');
-  static final kprimaryColor400 = HexColor('#FFB6BF');
-  static final kprimaryColor500 = HexColor('#F9A7B2');
-  static final kprimaryColor600 = HexColor('#F48C99');
-  static final kprimaryColor700 = HexColor('#D85B6B');
-  static final kprimaryColor800 = HexColor('#C93B4D');
-  static final kprimaryColor900 = HexColor('#960618');
+  static final kprimaryColor50 = HexColor('#fcf5e9');
+  static final kprimaryColor100 = HexColor('#f5e0bd');
+  static final kprimaryColor200 = HexColor('#eecb91');
+  static final kprimaryColor300 = HexColor('#eecb91');
+  static final kprimaryColor400 = HexColor('#e0a139');
+  static final kprimaryColor500 = HexColor(
+      '#c6881f'); // This opacity level makes the color completely transparent
+  static final kprimaryColor600 = HexColor('##9a6918');
+  static final kprimaryColor700 = HexColor('#6e4b11');
+  static final kprimaryColor800 = HexColor('#422d0a');
+  static final kprimaryColor900 = HexColor('#160f03');
 
   /// SECONDARY DESIGN COLORS
-  static final ksecondaryColor50 = HexColor('#F5FFFF');
-  static final ksecondaryColor100 = HexColor('#DCF9FA');
-  static final ksecondaryColor200 = HexColor('#C4F3F5');
-  static final ksecondaryColor300 = HexColor('#93E7EB');
-  static final ksecondaryColor400 = HexColor('#62DCE0');
-  static final ksecondaryColor500 = HexColor('#00C4CC');
-  static final ksecondaryColor600 = HexColor('#00767A');
-  static final ksecondaryColor700 = HexColor('#004E52');
-  static final ksecondaryColor800 = HexColor('#003B3D');
-  static final ksecondaryColor900 = HexColor('#002325');
+  static final ksecondaryColor50 = HexColor('#fffbf2');
+  static final ksecondaryColor100 = HexColor('#fef4d8');
+  static final ksecondaryColor200 = HexColor('#fdedbe');
+  static final ksecondaryColor300 = HexColor('#fde5a3');
+  static final ksecondaryColor400 = HexColor('#fcde89');
+  static final ksecondaryColor500 = HexColor('#fbd66f');
+  static final ksecondaryColor600 = HexColor('#fbcf55');
+  static final ksecondaryColor700 = HexColor('#fac83b');
+  static final ksecondaryColor800 = HexColor('#f9c021');
+  static final ksecondaryColor900 = HexColor('#dea506');
 
   /// GRAY DESIGN COLORS
   static final kgrayColor50 = HexColor('#F7F7F7');

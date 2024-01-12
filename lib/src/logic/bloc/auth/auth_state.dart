@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-import '../../models/auth/auth/login/login_response.dart';
-import '../../models/auth/auth/reg/reg_response.dart';
 
 
 abstract class AuthState extends Equatable {
@@ -12,13 +10,12 @@ abstract class AuthState extends Equatable {
 }
 
 class LoginLoadedState extends AuthState {
-  final LoginResponse postResponses;
-  const LoginLoadedState({required this.postResponses});
+  const LoginLoadedState();
 
   @override
   String toString() => 'UnLoginState';
   @override
-  List<Object> get props => [postResponses];
+  List<Object> get props => [];
 }
 
 class AuthInitialState extends AuthState {
@@ -48,11 +45,10 @@ class AuthErrorState extends AuthState {
 }
 
 class RegLoadedState extends AuthState {
-  final RegResponse regResponse;
-  const RegLoadedState({required this.regResponse});
+  const RegLoadedState();
 
   @override
   String toString() => 'UnLoginState';
   @override
-  List<Object> get props => [regResponse];
+  List<Object> get props => [];
 }

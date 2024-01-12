@@ -3,8 +3,6 @@
 import 'dart:async';
 import 'dart:developer' as developer;
 import 'package:meta/meta.dart';
-import '../../models/auth/auth/login/login_payload.dart';
-import '../../models/auth/auth/reg/reg_payload.dart';
 import '../../repository/auth/auth_repo.dart';
 import 'auth_bloc.dart';
 import 'auth_state.dart';
@@ -16,9 +14,8 @@ abstract class AuthEvent {
 
 class UserLoginEvent extends AuthEvent {
   final AuthRepository authRepository;
-  final LoginPayload loginPayload;
 
-  UserLoginEvent(this.authRepository, {required this.loginPayload});
+  UserLoginEvent(this.authRepository, );
   @override
   Stream<AuthState> applyAsync(
       {AuthState? currentState, AuthBloc? bloc}) async* {
@@ -33,8 +30,7 @@ class UserLoginEvent extends AuthEvent {
 
 class UserRegEvent extends AuthEvent {
   final AuthRepository authRepository;
-  final RegPayload regPayload;
-  UserRegEvent(this.authRepository, {required this.regPayload});
+  UserRegEvent(this.authRepository, );
   @override
   Stream<AuthState> applyAsync(
       {AuthState? currentState, AuthBloc? bloc}) async* {

@@ -41,3 +41,31 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+    - assets/icons/images/
+
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins/Poppins-Light.ttf
+          weight:  500
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+          weight:  600
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+          weight:  700
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans/DMSans-Regular.ttf
+        - asset: assets/fonts/DMSans/DMSans-Light.ttf
+          weight:  500
+        - asset: assets/fonts/DMSans/DMSans-Regular.ttf
+          weight:  600
+        - asset: assets/fonts/DMSans/DMSans-Bold.ttf
+          weight:  700
